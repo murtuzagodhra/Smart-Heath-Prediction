@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Remedy</title>
+    <link rel="stylesheet" href="remedy.css">
+</head>
+<body>
+<div class="banner">
+<div class="content">
+<h3>Dont find fault, find a Remedy; Anybody can Complain</h3><br>
+<form>
+<input name="symptom" type="text" placeholder="Enter Symptoms" required>
+<br> <br>
+<a href="#" onclick="toggle();">SEARCH</a>
+<a class="hide" href="#" onclick="toggle2();">SEARCH</a>
+<br>
+<a class="hide" href="#" onclick="toggle3();">SEARCH</a>
+
+</form>
+</div>
+</div>
+
+<div class="trailer">
+<iframe width="727" height="409" src="https://www.youtube.com/embed/FGMRnvqCtrE" frameborder="10" ></iframe>
+</div>
+
+<div class="trailer2">
+<iframe width="881" height="493" src="https://www.youtube.com/embed/LoadtnQab0s" frameborder="10"></iframe>
+</div>
+
+<div class="trailer3">
+<iframe width="881" height="493" src="https://www.youtube.com/embed/BB86yIOmhVc" frameborder="10"></iframe>
+</div>
+
+<script type="text/javascript">
+    function toggle(){
+        var trailer = document.querySelector(".trailer")
+        var iframe = document.querySelector("iframe")
+        trailer.classList.toggle("active");
+        iframe.pause();
+        iframe.currentTime = 0;
+    }
+
+    function toggle2(){
+        var trailer = document.querySelector(".trailer2")
+        var iframe = document.querySelector("iframe")
+        trailer.classList.toggle("active");
+        iframe.pause();
+        iframe.currentTime = 0;
+    }
+
+    function toggle3(){
+        var trailer = document.querySelector(".trailer3")
+        var iframe = document.querySelector("iframe")
+        trailer.classList.toggle("active");
+        iframe.pause();
+        iframe.currentTime = 0;
+    }
+
+
+</script>
+ </body>
+ </html>

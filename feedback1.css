@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg,#0162c8,#55e7fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 380px;
+    width: 400px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #674A40,#F95335);
+    box-shadow: 0 0 100px 50px #5bea;
+    border: 2px solid #bea;
+    border-radius: 10px;
+    transition: 10s;
+    overflow: hidden;
+}
+h1{
+    font-size: 35px;
+    font-family: 'Oswald', sans-serif;
+    user-select: none;
+    text-transform: uppercase;
+}
+.form{
+    margin: 30px;
+    box-sizing: border-box;
+}
+.username input{
+    width: 500px;
+    height: 40px;
+    margin-top: 15%;
+    border: none;
+    background: transparent;
+    border-bottom: 3px solid #fff;
+    font-size: 20px;
+    outline: none;
+}
+.username input::placeholder{
+    color: #222;
+}
+.sub{
+    margin-top: 50%;
+    position: relative;
+}
+.sub input{
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #5bea,#ffc0);
+    border: 3px solid #fff;
+    color: #f2f2f2;
+    font-family: 'Trade Winds', cursive;
+}
+.sub input[type='submit']:active{
+    border-color: #755bea;
+}
+.rating{
+    position: absolute;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.rating input{
+    display: none;
+}
+.rating label img{
+    width: 50px;
+}
+.rating label{
+    position: relative;
+    width: 0px;
+    height: 120px;
+    cursor: pointer;
+    transition: 0.5s;
+    filter: grayscale();
+    text-align: center;
+    opacity: 0;
+}
+.rating:hover label{
+    width: 100px;
+    opacity: 0.2;
+}
+.rating input:hover + label,
+.rating input:checked + label{
+    opacity: 1;
+    width: 100px;
+    filter: grayscale(0);
+}
+.rating label h4{
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translate(-50px) scale(0);
+    padding-top: 0px;
+    transition: 0.5s;
+}
+.rating input:hover + label h4,
+.rating input:checked + label h4{
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
